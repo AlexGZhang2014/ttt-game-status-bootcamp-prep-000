@@ -47,3 +47,13 @@ def over?(board)
     return false
   end
 end
+
+def winner(board)
+  if won?(board) == ["X", "X", "X"]
+    return "X"
+  elsif won?(board) == ["O", "O", "O"]
+    return "O"
+  else
+    return false
+  end
+end
