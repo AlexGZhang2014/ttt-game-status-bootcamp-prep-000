@@ -14,7 +14,9 @@ def won?(board)
     position_1 = board[windex_1]
     position_2 = board[windex_2]
     position_3 = board[windex_3]
-    if position_1 == "X" && position_2 = "X" && position_3 == "X" || position_1 == "O" && position_2 == "O" && position_3 == "O"
+    if position_1 == "X" && position_2 = "X" && position_3 == "X"
+      return combo
+    elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
       return combo
     end
   end
