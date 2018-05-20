@@ -38,12 +38,11 @@ def over?(board)
 end
 
 def winner(board)
-  win_win = won?(board)
-  if board[win_win[0]] == "X" && board[win_win[1]] == "X" && board[win_win[2]] == "X"
+  if won?(board) && won?(board)[0] == "X" && won?(board)[1] == "X" && won?(board)[2] == "X"
     return "X"
-  elsif board[win_win[0]] == "O" && board[win_win[1]] == "O" && board[win_win[2]] == "O"
+  elsif won?(board) && won?(board)[0] == "O" && won?(board)[1] == "O" && won?(board)[2] == "O"
     return "O"
-  elsif won?(board) == false
+  else
     return nil
   end
 end
