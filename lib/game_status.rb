@@ -38,11 +38,11 @@ def over?(board)
 end
 
 def winner(board)
-  if board[won?(board)[0]] == "X" && board[won?(board)[1]] == "X" && board[won?(board)[2]] == "X"
+  if !won?(board)
+    return nil
+  elsif board[won?(board)[0]] == "X" && board[won?(board)[1]] == "X" && board[won?(board)[2]] == "X"
     return "X"
   elsif board[won?(board)[0]] == "O" && board[won?(board)[1]] == "O" && board[won?(board)[2]] == "O"
     return "O"
-  else
-    return nil
   end
 end
