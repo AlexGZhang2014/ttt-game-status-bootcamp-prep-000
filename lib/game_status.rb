@@ -24,5 +24,10 @@ def won?(board)
 end
 
 def full?(board)
-  
+  final_board = board.select(|element| element.position_taken?)
+  if final_board.length == 9
+    return true
+  else
+    return false
+  end
 end
