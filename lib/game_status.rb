@@ -43,7 +43,6 @@ def winner(board)
     return "X"
   elsif board[win_win[0]] == "O" && board[win_win[1]] == "O" && board[win_win[2]] == "O"
     return "O"
-  else
-    return nil
   end
+  return nil
 end
